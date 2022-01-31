@@ -1,0 +1,8 @@
+Trivially, 1x1 has 2 paths
+Given 2x2 has 6 paths
+Worked out that a 3x3 has 20 paths
+
+Searched 2,6,20 on the online encyclopedia of integer sequences
+https://oeis.org/A000984
+binomial series
+take the 21st number
