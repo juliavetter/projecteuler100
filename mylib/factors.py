@@ -23,6 +23,8 @@ def prime(n: int):
         return True
     elif n % 2 == 0:
         return False
+    elif math.sqrt(n).is_integer():
+        return False
     else:
         for i in range(3, int(math.sqrt(n)) + 1, 2):
             if n % i == 0:
