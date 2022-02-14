@@ -1,6 +1,8 @@
 import math
 
 # returns a list of factors of n, including 1 and n
+
+
 def factors(n: int):
     factors = [1]
     for i in range(2, math.ceil(math.sqrt(n))):
@@ -15,14 +17,14 @@ def factors(n: int):
 
 # returns true iff n is prime
 def prime(n: int):
-    if n <= 0:
+    if n <= 1:
         return False
-    for i in range(2, math.ceil(math.sqrt(n))):
-        if (n / i).is_integer():
-            return False
-    # special cases needed for some reason
-    if n == 4:
+    elif n == 2:
+        return True
+    elif n % 2 == 0:
         return False
-    if math.sqrt(n).is_integer():
-        return False
-    return True
+    else:
+        for i in range(3, int(math.sqrt(n)) + 1, 2):
+            if n % i == 0:
+                return False
+        return True
